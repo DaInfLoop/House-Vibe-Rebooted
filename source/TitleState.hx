@@ -250,8 +250,16 @@ class TitleState extends MusicBeatState
 			// FlxG.sound.list.add(music);
 			// music.play();
 
+			var date = Date.now();
+
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				if (date.getMonth() == 11 || date.getMonth() == 0) {
+					FlxG.sound.playMusic(Paths.music('frostyMenu'), 0);
+				} else if (date.getMonth() == 9) {
+					FlxG.sound.playMusic(Paths.music('spookyMenu'), 0);
+				} else {
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				}
 			}
 		}
 
@@ -554,7 +562,7 @@ class TitleState extends MusicBeatState
 			#end
 		}
 
-		if (initialized && pressedEnter && !skippedIntro)
+		if (initialized && !skippedIntro)
 		{
 			skipIntro();
 		}
