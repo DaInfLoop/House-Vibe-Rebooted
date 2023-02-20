@@ -247,7 +247,7 @@ class TitleState extends MusicBeatState
 
 			// var music:FlxSound = new FlxSound();
 			// music.loadStream(Paths.music('freakyMenu'));
-			// FlxG.sound.list.add(music);
+			// FlxG.sound.list.add(music);                                                 
 			// music.play();
 
 			var date = Date.now();
